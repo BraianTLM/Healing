@@ -1,0 +1,56 @@
+# Criar um ambiente virtual
+	# Linux
+		python3 -m venv venv
+	# Windows
+		python -m venv venv
+
+# Ativar o ambiente virtual
+	# Linux
+		source venv/bin/activate
+	# Windows
+		venv\Scripts\Activate
+
+--> Para rodar em linux ou mac os comando que iniciam com python troca para python3 <--
+
+# Caso algum comando retorne um erro de permissão execute o código e tente novamente:
+    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+# Instalar as bibliotecas e framework
+    pip install django
+    pip install pillow
+
+# Criar um projeto Django
+    django-admin startproject nome do projeto . -> " ." é para criar no diretório atual
+
+# Rodar o servidor
+	-> python manage.py runserver
+	
+	Ctrl + C -> Parar o servidor
+	
+	F5 -> Atualizar a página do servidor
+	
+	Ctrl + F5 -> Atualizar a página do servidor apagando caches que ficm na página, 
+		obs: utilizar em caso da pagina não funcionar com o F5
+
+# Criar um app
+    python manage.py startapp nome do app
+
+# Executar as migrações
+	python manage.py migrate -> pega todas as tabelas da nossa aplicação que não foram efetivadas e cria elas no BD
+	python manage.py makemigrations -> cria um arquivo de especificação para a criação na pasta migrations dentro do app
+
+# Back-End no Front-End
+	{{}} -> tag para printar 
+	{%%} -> tag para a lógica
+
+# Criar um super usuário ou usuário admin
+	python manage.py createsuperuser
+
+# Usuário e senha admin
+	braian
+	1234
+
+# Lição de casa
+	->Fazer a validação de segurança nos restantes pontos do código
+	->Botão de cancelar consulta
+	->Dashboard
