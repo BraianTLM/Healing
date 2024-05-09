@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-m(_4&mgead_myu&r@$$-=#ht)vvaq_x1j@w6her!*6qj3jm*u&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -142,3 +142,7 @@ MESSAGE_TAGS = {
     constants.INFO: 'alert-info',
     constants.WARNING: 'alert-warning',
 }
+
+#Auth
+
+LOGIN_URL = '/usuarios/login'
